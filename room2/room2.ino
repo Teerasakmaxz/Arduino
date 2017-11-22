@@ -69,58 +69,58 @@ void loop() {
   state = Firebase.getInt("room2/state");
 
  
-  if (digitalRead(buttonAir1) == HIGH && buttonStateA1 == 0 ) {
-
-    if (buttonStateA1 == 0 && air == 0 && state == 0) {
-      buttonStateA1 = 1;
-      Serial.println("h 1");
-    } else if (buttonStateA1 == 1 && air == 1 && state == 1) {
-      buttonStateA1 = 0;
-      Serial.println("b 0");
-
-    }
-
-  } else if (digitalRead(buttonAir1) == HIGH && buttonStateA1 == 1 ) {
-
-    if (buttonStateA1 == 0 && air == 0 && state == 0) {
-      buttonStateA1 = 1;
-      Serial.println("h 1");
-    } else if (buttonStateA1 == 1 && air == 1 && state == 1) {
-      buttonStateA1 = 0;
-      Serial.println("b 0");
-
-    }
-     
-  }
- Firebase.set("room2/button", buttonStateA1);
-
-  air1 = Firebase.getInt("room2/air1");
-  state1 = Firebase.getInt("room2/state01");
-  buttonStateA2  = Firebase.getInt("room12button2");
-  
-  if (digitalRead(buttonAir2) == HIGH && buttonStateA2 == 0 ) {
-
-    if (buttonStateA2 == 0 && air1 == 0 && state1 == 0) {
-      buttonStateA2 = 2;
-      Serial.println("A1h 1");
-    } else if (buttonStateA2 == 2 && air1 == 2 && state1 == 1) {
-      buttonStateA2 = 0;
-      Serial.println("A1b 0");
-
-    }
-
-  } else if (digitalRead(buttonAir2) == HIGH && buttonStateA2 == 2 ) {
-
-    if (buttonStateA2 == 0 && air1 == 0 && state1 == 0) {
-      buttonStateA2 = 2;
-      Serial.println("A2h 1");
-    } else if (buttonStateA2 == 2 && air1 == 2 && state1 == 1) {
-      buttonStateA2 = 0;
-      Serial.println("A2b 0");
-
-    }
-  }
-  Firebase.set("room2/button2", buttonStateA2);
+//  if (digitalRead(buttonAir1) == HIGH && buttonStateA1 == 0 ) {
+//
+//    if (buttonStateA1 == 0 && air == 0 && state == 0) {
+//      buttonStateA1 = 3;
+//      Serial.println("h 1");
+//    } else if (buttonStateA1 == 1 && air == 3 && state == 1) {
+//      buttonStateA1 = 0;
+//      Serial.println("b 0");
+//
+//    }
+//
+//  } else if (digitalRead(buttonAir1) == HIGH && buttonStateA1 == 1 ) {
+//
+//    if (buttonStateA1 == 0 && air == 0 && state == 0) {
+//      buttonStateA1 = 3;
+//      Serial.println("h 1");
+//    } else if (buttonStateA1 == 1 && air == 3 && state == 1) {
+//      buttonStateA1 = 0;
+//      Serial.println("b 0");
+//
+//    }
+//     
+//  }
+// Firebase.set("room2/button", buttonStateA1);
+//
+//  air1 = Firebase.getInt("room2/air1");
+//  state1 = Firebase.getInt("room2/state01");
+//  buttonStateA2  = Firebase.getInt("room12button2");
+//  
+//  if (digitalRead(buttonAir2) == HIGH && buttonStateA2 == 0 ) {
+//
+//    if (buttonStateA2 == 0 && air1 == 0 && state1 == 0) {
+//      buttonStateA2 = 4;
+//      Serial.println("A1h 1");
+//    } else if (buttonStateA2 == 2 && air1 == 4 && state1 == 1) {
+//      buttonStateA2 = 0;
+//      Serial.println("A1b 0");
+//
+//    }
+//
+//  } else if (digitalRead(buttonAir2) == HIGH && buttonStateA2 == 2 ) {
+//
+//    if (buttonStateA2 == 0 && air1 == 0 && state1 == 0) {
+//      buttonStateA2 = 4;
+//      Serial.println("A2h 1");
+//    } else if (buttonStateA2 == 2 && air1 == 4 && state1 == 1) {
+//      buttonStateA2 = 0;
+//      Serial.println("A2b 0");
+//
+//    }
+//  }
+//  Firebase.set("room2/button2", buttonStateA2);
 
 
   people();

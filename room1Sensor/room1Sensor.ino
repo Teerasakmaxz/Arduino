@@ -13,8 +13,8 @@ int count = 0;
 
 #define FIREBASE_HOST "datacontro.firebaseio.com"
 #define FIREBASE_AUTH "T4Sj1NzCmvsoClqegpG3VnaT9DLw2FzNKgqXZ0IR"
-#define WIFI_SSID "iPad"
-#define WIFI_PASSWORD "mimimiml1111111"
+#define WIFI_SSID "iPhone"
+#define WIFI_PASSWORD "keee@123"
 
 void setup() {
 
@@ -27,12 +27,12 @@ void setup() {
     delay(500);
   }//loop while
   Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);
-  Firebase.set("room2/UserinRoom",0);
-  Firebase.set("room2/toggle1", true);
+  Firebase.set("room1/UserinRoom",0);
+  Firebase.set("room1/toggle1", true);
 }
 void loop() {
-    Firebase.set("room2/UserinRoom", count);
-    Firebase.set("room2/toggle1", toggle1);
+    Firebase.set("room1/UserinRoom", count);
+    Firebase.set("room1/toggle1", toggle1);
   
   if (digitalRead(sensorone) == LOW && toggle == false) {
     sensorState = 1 ;
